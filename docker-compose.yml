@@ -9,6 +9,9 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ./notebooks:/home/jovyan/work
-      - ./data:/home/jovyan/data
-      - ./output:/home/jovyan/output
+      - ./notebooks:/workspace/notebooks
+      - ./data:/workspace/data
+      - ./output:/workspace/output
+    working_dir: /workspace
+    command: >
+      jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token= --NotebookApp.password=
