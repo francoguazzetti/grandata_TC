@@ -64,4 +64,4 @@ spark-submit \
  --driver-memory 4G \
  --conf spark.yarn.executor.memoryOverhead=2G \
  --conf spark.dynamicAllocation.enabled=false \
- spark_script.py
+ sms-analysis.py
